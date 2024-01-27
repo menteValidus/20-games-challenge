@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://btjtioi4ho5nm"]
+[gd_scene load_steps=6 format=3 uid="uid://btjtioi4ho5nm"]
 
 [ext_resource type="Texture2D" uid="uid://c54qkqrwsuxs4" path="res://base-color.png" id="1_6np6q"]
 [ext_resource type="PackedScene" uid="uid://d27mkyatl34ee" path="res://scenes/paddle.tscn" id="2_4euah"]
 [ext_resource type="PackedScene" uid="uid://bermmy2rwf6o0" path="res://scenes/wall.tscn" id="2_eljtf"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="4_f3ga6"]
+[ext_resource type="Script" path="res://scenes/opponent.gd" id="5_ywofb"]
 
 [node name="Main" type="Node"]
 
@@ -29,6 +31,8 @@ scale = Vector2(42.92, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_4euah")]
 position = Vector2(-424, 0)
+script = ExtResource("4_f3ga6")
 
 [node name="Opponent" parent="." instance=ExtResource("2_4euah")]
 position = Vector2(424, 0)
+script = ExtResource("5_ywofb")
